@@ -12,4 +12,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-[GPL]([Capacitor-Simulator/LICENSE at main · TheDarkBug/Capacitor-Simulator · GitHub](https://github.com/TheDarkBug/Capacitor-Simulator/blob/main/LICENSE))
+[GPL](https://github.com/TheDarkBug/Capacitor-Simulator/blob/main/LICENSE)
