@@ -16,7 +16,7 @@ class Cable():
 				self.cableColor = False
 				self.cabling = True
 		if self.cableColor and self.cabling:
-			stroke(255, 0, 0) 
+			stroke(255, 0, 0)
 			curve(1200, 900, 730, 190, mouseX, mouseY, 300, 460)
 			if mouseX > 360 and mouseX < 440 and mouseY > 260 and mouseY < 280:
 				curve(1200, 900, 730, 190, 425, 270, 100, 100)

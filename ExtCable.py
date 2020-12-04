@@ -49,5 +49,5 @@ class ExtCable():
 			curve(1200, 0, self.nx, self.ny, 420, 300, 500, 100)
 		strokeWeight(1)
 	def collide(self):
-		pass 
+		pass
 		#if self.N
