@@ -4,7 +4,7 @@ class Capacitor():
 	def __init__(self):
 		self.rx, self.ry, self.rz = 70, 0, 30
 		self.x, self.y = 250, 219
-		self.charge = 400
+		self.charge = 0
 		self.eCable = ExtCable()
 
 	def show(self):
@@ -28,8 +28,18 @@ class Capacitor():
 		translate(0, 0, 10)
 		rect(0, 0, 200, 150)
 		popMatrix()
-		self.cables()
-	
-	def cables(self):
 		self.eCable.show(self.charge)
-		self.eCable.collide()
+		self.eCable.collide(self.charge)
+		if self.eCable.discharging and self.charge > 0:
+			self.charge -= 4
+			if self.charge <= 0:
+				self.eCable.px = 0
+				self.eCable.py = 0
+				self.eCable.nx = 0
+				self.eCable.ny = 0
+				self.eCable.P = False
+				self.eCable.N = False
+				self.eCable.cabling = False
+				self.eCable.pos = True
+				self.eCable.mouseHit = False
+				self.eCable.discharging = False

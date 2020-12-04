@@ -9,6 +9,7 @@ class ExtCable():
 		self.cabling = False
 		self.pos = True
 		self.mouseHit = False
+		self.discharging = False
 
 	def show(self, capacitorCharge):
 		if capacitorCharge > 0:
@@ -48,6 +49,19 @@ class ExtCable():
 		if self.N:
 			curve(1200, 0, self.nx, self.ny, 420, 300, 500, 100)
 		strokeWeight(1)
-	def collide(self):
-		pass
-		#if self.N
+
+	def collide(self, capacitorCharge):
+		if abs(mouseX - self.px) < 40 and abs(mouseY - self.py) < 40 and self.P and self.cabling and capacitorCharge > 0:
+			stroke(0, 0, 255)
+			strokeWeight(3)
+			curve(600, 600, self.nx, self.ny, self.px, self.py, 500, 600)
+			strokeWeight(1)
+			stroke(0)
+			self.discharging = True
+		elif abs(mouseX - self.nx) < 40 and abs(mouseY - self.ny) < 40 and self.N and self.cabling and capacitorCharge > 0:
+			stroke(0, 0, 255)
+			strokeWeight(3)
+			curve(600, 600, self.nx, self.ny, self.px, self.py, 500, 600)
+			strokeWeight(1)
+			stroke(0)
+			self.discharging = True
