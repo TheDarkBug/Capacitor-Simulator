@@ -1,11 +1,9 @@
-from Cable import *
 class Capacitor():
     def __init__(self):
-        self.rx, self.ry, self.rz = 80, 0, 40
-        self.x, self.y = 250, 280
-        self.cable = Cable()
+        self.rx, self.ry, self.rz = 70, 0, 30
+        self.x, self.y = 250, 219
+
     def show(self):
-        self.cable.show()
         pushMatrix()
         stroke(0)
         translate(self.x, self.y)
@@ -25,3 +23,30 @@ class Capacitor():
         translate(0, 0, 10)
         rect(0, 0, 200, 150)
         popMatrix()
+
+    def move(self):
+        if keyPressed and key == 'x':
+            self.rx += 1
+        if keyPressed and key == 'y':
+            self.ry += 1
+        if keyPressed and key == 'z':
+            self.rz += 1
+        if keyPressed and key == 'X':
+            self.rx -= 1
+        if keyPressed and key == 'Y':
+            self.ry -= 1
+        if keyPressed and key == 'Z':
+            self.rz -= 1
+        if keyPressed and key == 'w':
+            self.y -= 1
+        if keyPressed and key == 'a':
+            self.x -= 1
+        if keyPressed and key == 's':
+            self.y += 1
+        if keyPressed and key == 'd':
+            self.x += 1
+        if keyPressed and key == 'r':
+            self.rx, self.ry, self.rz = 70, 0, 30
+            self.x, self.y = 250, 219
+        # print(self.x,	self.y)
+        # print(self.rx,	self.ry,	self.rz)
