@@ -19,7 +19,7 @@ class Battery():
 		self.cable.show()
 
 	def btoc(self):
-			self.charge -= 2
+			self.charge -= 2 
 			stroke(0, 0, 255)
 			noFill()
 			strokeWeight(6)

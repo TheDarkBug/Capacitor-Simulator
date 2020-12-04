@@ -32,4 +32,4 @@ class Capacitor():
 	
 	def cables(self):
 		self.eCable.show(self.charge)
-		self.eCable.collide()
+		self.eCable.collide() 
