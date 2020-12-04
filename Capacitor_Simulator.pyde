@@ -12,10 +12,9 @@ def draw():
 	background(150)
 	battery.show()
 	capacitor.show()
-	capacitor.move()
-	#print(mouseX, mouseY)
+	print(mouseX, mouseY)
 	if capacitor.charge < 400 and battery.cable.cableP and battery.cable.cableN:
-		capacitor.charge += 1
+		capacitor.charge += 2
 		if capacitor.charge >= 400:
 			battery.cable.cableP = False
 			battery.cable.cableN = False
